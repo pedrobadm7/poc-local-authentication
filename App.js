@@ -1,6 +1,7 @@
 import React from "react";
-import { Login } from "./src/pages/Login";
+
+import Routes from "./src/routes/HomeStack.js";
 
 export default function App() {
-  return <Login />;
+  return <Routes />;
 }

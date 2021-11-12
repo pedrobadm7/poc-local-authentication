@@ -14,9 +14,12 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 
 import * as LocalAuthentication from "expo-local-authentication";
+import { useNavigation } from "@react-navigation/core";
 
-export function Login() {
+export default function Login() {
   const [isBiometricSupported, setIsBiometricSupported] = useState(false);
+
+  const navigation = useNavigation();
 
   useEffect(() => {
     async () => {
@@ -75,6 +78,7 @@ export function Login() {
 
     if (biometricAuth) {
       console.log("Biometric auth success");
+      navigation.navigate("Welcome");
     }
   };
 
