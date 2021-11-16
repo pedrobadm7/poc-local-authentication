@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/img/logo.png";
+import Logo from "../assets/img/Logo-neon.png";
 import Card from "../assets/img/cardimg.png";
 import {
   View,
@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   Alert,
   SafeAreaView,
-  Dimensions
+  Dimensions,
 } from "react-native";
 
 export default function Welcome() {
@@ -24,16 +24,16 @@ export default function Welcome() {
 const styled = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#000",
-    alignItems: "center"
+    backgroundColor: "#272134",
+    alignItems: "center",
   },
   image: {
-    width: 150
+    width: 150,
   },
   text: {
-    color: "#fff"
+    color: "#fff",
   },
   card: {
-    height: Dimensions.get("window").width * 0.6
-  }
+    height: Dimensions.get("window").width * 0.6,
+  },
 });

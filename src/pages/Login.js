@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Logo from "../assets/img/logo.png";
+import Logo from "../assets/img/Logo-neon.png";
 
 import {
   View,
@@ -8,7 +8,7 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
-  Alert
+  Alert,
 } from "react-native";
 
 import { Ionicons } from "@expo/vector-icons";
@@ -36,8 +36,8 @@ export default function Login() {
     return Alert.alert(title, message), [
       {
         text: btnText,
-        onPress: btnFunc
-      }
+        onPress: btnFunc,
+      },
     ];
   };
 
@@ -73,7 +73,7 @@ export default function Login() {
       promptMessage: "Authenticate with your biometric",
       fallbackLabel: "Enter with your e-mail and recovery phrase",
       disableDeviceFallback: true,
-      cancelLabel: "Cancel"
+      cancelLabel: "Cancel",
     });
 
     if (biometricAuth) {
@@ -100,24 +100,24 @@ export default function Login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#000",
+    backgroundColor: "#272134",
     alignItems: "center",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
   },
   containerText: {
-    flexDirection: "row"
+    flexDirection: "row",
   },
   text: {
     color: "#fff",
-    fontSize: 18
+    fontSize: 18,
   },
   textUsername: {
     fontWeight: "bold",
     color: "#fff",
-    fontSize: 18
+    fontSize: 18,
   },
   image: {
-    width: 180
+    width: 180,
   },
   finger: {
     height: 70,
@@ -126,6 +126,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#F4AE64",
     alignItems: "center",
-    justifyContent: "center"
-  }
+    justifyContent: "center",
+  },
 });
